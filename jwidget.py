@@ -88,7 +88,6 @@ def init(*args, **kwargs):
 	reset.observe(onToggleReset,'value')
 
 	box = widgets.VBox([w, buttons])
-	display(box)
 
 	def background_threading():
 		global flag
