@@ -4,6 +4,7 @@ import numpy as np
 import threading
 import time
 from ipyevents import Event 
+from IPython.display import display
 
 flag = False
 downflag = False
@@ -88,6 +89,7 @@ def init(*args, **kwargs):
 	reset.observe(onToggleReset,'value')
 
 	box = widgets.VBox([w, buttons])
+	display(box)
 
 	def background_threading():
 		global flag
